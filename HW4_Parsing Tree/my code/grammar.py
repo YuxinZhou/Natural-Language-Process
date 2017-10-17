@@ -97,6 +97,7 @@ def calculate_prob(dct):
             count += dct[parent][child]
 
         # Smooth
+        # Add <unknown> for each non-terminal node
         if dct[parent]['<unk>'] == 0:
             count += 1
             dct[parent]['<unk>'] = 1
