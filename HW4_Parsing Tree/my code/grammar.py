@@ -5,7 +5,6 @@ import tree
 import re
 import os, fileinput
 import math
-import time
 import argparse
 import sys
 import codecs
@@ -74,8 +73,6 @@ def prepfile(fh, code):
             sys.stderr.write("I didn't understand code " + code + "\n")
             sys.exit(1)
     return ret
-
-
 
 
 def learning_rules(line):
