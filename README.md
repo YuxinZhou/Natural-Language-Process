@@ -44,10 +44,10 @@ The aim of this project is to do authorship identification on lines of poetry wr
 
 #### About the Data
 * train set:  
-	*`s.data` Lines of poetry by Shakespeare, marked with an ’s’   
- 	*`b.data` Lines of poetry by Bronte, marked with an ’b’  
-*dev set:   
-	* `dev.tsv` Lines of poetry mixed of Shakespeare and Bronte  
+	* `s.data` Lines of poetry by Shakespeare, marked with an ’s’   
+ 	* `b.data` Lines of poetry by Bronte, marked with an ’b’  
+* dev set:   
+	*  `dev.tsv` Lines of poetry mixed of Shakespeare and Bronte  
 
 
 #### Usage
