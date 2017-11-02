@@ -1,14 +1,14 @@
 # Applied Natural-Language-Process
 
-A collection of interesting applied NLP tasks
+A collection of interesting applied NLP tasks  
 
 ## Word Similarity
 
-This module implements comparison functions for word representations and uses the functions and representations to solve semantic similarity tasks.
+This module implements comparison functions for word representations and uses the functions and representations to solve semantic similarity tasks.  
 
-It supports similarity queries and analogical reasoning tasks.
+It supports similarity queries and analogical reasoning tasks.  
 
-`show_nearest()` finds the 10 words most similar to w. Display the similar words, and their similarity scores against the query word w. An example input queries:
+`show_nearest()` finds the 10 words most similar to w. Display the similar words, and their similarity scores against the query word w. An example input queries:  
 ```
 company
 ```
@@ -40,14 +40,14 @@ See how to use it from the folder “example”
 
 
 ## Authorship Identification
-The aim of this project is to do authorship identification on lines of poetry written by Emily Bronte and William Shakespeare. We use the Naive Bayes classifier provided by nltk.
+The aim of this project is to do authorship identification on lines of poetry written by Emily Bronte and William Shakespeare. We use the Naive Bayes classifier provided by nltk.  
 
 #### About the Data
-train set:
-	s.data Lines of poetry by Shakespeare, marked with an ’s’ 
- 	b.data Lines of poetry by Bronte, marked with an ’b’
-dev set: 
-	dev.tsv Lines of poetry mixed of Shakespeare and Bronte
+train set:  
+	s.data Lines of poetry by Shakespeare, marked with an ’s’   
+ 	b.data Lines of poetry by Bronte, marked with an ’b’  
+dev set:   
+	dev.tsv Lines of poetry mixed of Shakespeare and Bronte  
 
 
 #### Usage
