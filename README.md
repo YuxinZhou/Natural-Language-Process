@@ -73,9 +73,9 @@ In this assignment we build a simple constituency parser trained from the ATIS p
 #### About the Data
 * Train set & preprocess  
 The file `train.trees` contains a sequence of trees, one per line, each in the following format:
-```
-  (TOP (S (VP (VB Book) (NP (DT that) (NN flight)))) (PUNC .))
-```
+	```
+  	(TOP (S (VP (VB Book) (NP (DT that) (NN flight)))) (PUNC .))
+	```
 	* Running `train.trees` through `preprocess.py` makes the trees strictly binary branching.   
 	* Running `postprocess.py` reverses all the modifications made by preprocess.py.  
 	* Running `train.trees` through `unknown.py` replaces all words that occurred only once with the special symbol <unk>.  
