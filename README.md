@@ -43,11 +43,11 @@ See how to use it from the folder “example”
 The aim of this project is to do authorship identification on lines of poetry written by Emily Bronte and William Shakespeare. We use the Naive Bayes classifier provided by nltk.  
 
 #### About the Data
-train set:  
-	* s.data Lines of poetry by Shakespeare, marked with an ’s’   
- 	* b.data Lines of poetry by Bronte, marked with an ’b’  
-dev set:   
-	* dev.tsv Lines of poetry mixed of Shakespeare and Bronte  
+* train set:  
+	*`s.data` Lines of poetry by Shakespeare, marked with an ’s’   
+ 	*`b.data` Lines of poetry by Bronte, marked with an ’b’  
+*dev set:   
+	* `dev.tsv` Lines of poetry mixed of Shakespeare and Bronte  
 
 
 #### Usage
@@ -72,7 +72,7 @@ In this assignment we build a simple constituency parser trained from the ATIS p
 
 #### About the Data
 Train set & preprocess  
-The file train.trees contains a sequence of trees, one per line, each in the following format:
+The file `train.trees` contains a sequence of trees, one per line, each in the following format:
 ```
   (TOP (S (VP (VB Book) (NP (DT that) (NN flight)))) (PUNC .))
 ```
