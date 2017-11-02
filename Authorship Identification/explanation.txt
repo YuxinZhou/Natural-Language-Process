@@ -1,0 +1,82 @@
+To do authorship identification between Bronte and Shakespeare,
+I have tried features among different categories, including lexical
+features, syntactic features and content-specific features. Among them,
+I have chosen F1, F2, F3, F9, F16 as my final features. I didn't use extra
+resource. The test result is as follow:
+    Accuracy on dev: 0.976808
+    Accuracy on hidden dev:  0.953333333333
+
+
+1. Lexical:
+
+* F1: Words frequencies.
+This is the original feature provided in classify.py. I modified it
+by filtering all the functional words, after which the performance
+raises slightly (about 1%)
+
+* F2 & F3: Mean and variance of word-length distribution.
+Linguists have proposed the word-length distribution as an author-
+invariance feature. In the experiment, these two features make an
+approximate 79%-accuracy separation on dev set.
+
+* F4: Number of syllables
+Shakespeare's sonnets usually have 10 syllables in one line, while
+Bronte's are more random. This feature individually achieves a 93%
+performance on dev set.
+
+* F5: Vocabulary richness
+The feature is difficult to measure on short text. I have tried to
+use the frequency of a word in brown corpus and set different thresholds
+but it is really useless (about 50%).
+
+* F6: 2-grams, 3-grams, n-grams
+These features seem do not work well on short text. An alternative way
+is to apply the n-grams directly on each character other than word.
+
+2. Syntactic feature:
+
+* F7: Percentage of function words
+This feature individually reaches a 70% performance on dev set.
+
+* F8: Percentage of punctuations
+The accuracy of using this feature alone is 73-78% on test data,
+evaluated using cross-validation.
+
+* F9: Percentage of capital letters (exclusive of "I" and the
+beginning of the sentence)
+The accuracy of using this feature alone is 74-76% on test data,
+evaluated using cross-validation.
+
+* F10: Frequency of noun
+I use nltk's PoS function to get the frequency of noun words. Yet this
+feature seems unimportant.
+
+* F11: 2-grams on PoS:
+The disadvantage of the above features is that they do not make use of
+the ordering information in a sentence. One way is to use 2-grams on the
+parsed sentence.
+For example, after parsing "more flowers I noted, yet I none could see"
+, we get "'jjr', 'nns', 'prp', 'vbd', ',', 'rb', 'prp', 'nn', 'md', 'vb'".
+The 2-grams are then (jjr, nns), (nns, prp), (prp, vbd) etc. This feature's
+performance is near 60% on test data.
+
+* F12: Probability of CFG:
+It theoretically has some effect. But considering the poor performance of
+F11, I haven't tried this one.
+
+3. Content-specific features
+
+* F13: Sentiment
+I use the Python packet pattern.en to judge the sentiment of a text. This
+feature's performance is 55%-60% on test data.
+
+* F14: Position of Punctuations
+The position of punctuations is related to the structure of a sentence.
+
+4. Format:
+
+* F15: The last space
+This feature result in an 100% accuracy, though I choose not to use it.
+
+* F16: The space before punctuation
+I have used this feature.
