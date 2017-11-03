@@ -72,11 +72,3 @@ feature's performance is 55%-60% on test data.
 
 * F14: Position of Punctuations
 The position of punctuations is related to the structure of a sentence.
-
-4. Format:
-
-* F15: The last space
-This feature result in an 100% accuracy, though I choose not to use it.
-
-* F16: The space before punctuation
-I have used this feature.
